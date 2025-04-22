@@ -1,11 +1,11 @@
 :root {
-  --clr-primary: #ff833e;
-  --clr-primary-dark: #db6f35;
-  --clr-text-dark: #333333;
-  --clr-text-ligth: #767268;
-  --clr-white: #ffffff;
+  --clr-primary: #3e41ff;
+  --clr-primary-dark: #3538db;
+  --clr-text-dark: #2c2c2c;
+  --clr-text-ligth: #5c5951;
+  --clr-white: #fff;
   --max-width: 1200px;
-  --header-font: "Bebas Neue", sans-serif;
+  --header-font: "Anton", sans-serif;
 }
 
 * {
@@ -26,8 +26,9 @@ a {
   transition: 0.3s;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+body,
+a {
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -51,6 +52,7 @@ nav {
   font-weight: 400;
   font-family: var(--header-font);
   color: var(--clr-white);
+  white-space: nowrap;
 }
 
 .nav_menu_btn {
@@ -102,13 +104,14 @@ nav {
   flex-direction: column;
   gap: 5px;
   padding: 2px;
+  overflow: hidden;
 }
 
 .nav_menu_btn .line {
   width: 20px;
   height: 2px;
   background-color: var(--clr-white);
-  transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1)
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1)
 }
 
 .nav_btns {
@@ -142,7 +145,7 @@ nav {
   background-size: cover;
   background-position: center center;
   border-radius: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -174,32 +177,45 @@ nav {
 }
 
 .header_image_card-1 {
-  top: 1%;
-  left: 5rem;
+  top: 5%;
+  left: 8rem;
   transform: translate(-50%, -50%);
 }
 
-.header_image_card-2 {
-  top: 10%;
-  right: 2rem;
+.header_image_card-3 {
+  top: 35%;
+  left: -2rem;
   transform: translateY(-50%);
 }
 
-.header_image_card-3 {
-  top: 60%;
-  left: 0;
+.header_image_card-5 {
+  top: 65%;
+  left: -1rem;
+  transform: translateY(-50%);
+}
+
+.header_image_card-2 {
+  top: 20%;
+  right: 1rem;
   transform: translateY(-50%);
 }
 
 .header_image_card-4 {
-  top: 70%;
-  right: 0;
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+}
+
+.header_image_card-6 {
+  top: 80%;
+  right: 1rem;
   transform: translateY(-50%);
 }
 
 .header_content h1 {
+  margin-top: 8rem;
   margin-bottom: 1rem;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   font-family: var(--header-font);
   color: var(--clr-text-dark);
@@ -348,6 +364,7 @@ nav {
   .nav_btns {
     display: flex;
     flex: 1;
+    gap: .75rem;
   }
 
   .nav_btns .btn {
@@ -366,6 +383,11 @@ nav {
     background-color: transparent;
   }
 
+  .sign_up:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-text-dark);
+  }
+
   .sign_in {
     color: var(--clr-white);
     background-color: var(--clr-primary);
@@ -373,12 +395,6 @@ nav {
 
   .sign_in:hover {
     background-color: var(--clr-primary-dark);
-  }
-
-  .header_image_card-1 {
-    top: 2%;
-    left: 0;
-    transform: translate(-50%, -50%);
   }
 
   .header_container {
